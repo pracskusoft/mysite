@@ -3,31 +3,62 @@
    <head>
       <title>Patalenszki Zoltán</title>
       <style>
-         #introduction{
-          color:blueviolet;  
-          font-family: Arial, Helvetica, sans-serif;
-          font-size: larger;
-          text-align: justify;
-          float: left;
-         }
-         #badges {
-            float: right;
-            border: 3px solid black;
-         }
-      </style>
+      #introduction {
+         color: black;
+         font-family: Arial, Helvetica, sans-serif;
+         font-size: 1.5em;
+         text-align: justify;
+         float: left;
+         display: inline-block;
+      }
+
+      #badges {
+         float: right;
+         height: 100px;
+         position: absolute;
+         bottom: 10%;
+         align-content: center;
+         text-align: center;
+      }
+
+      #oracle_badges {
+         height: 200%;
+         width: 33%;
+         float: left;
+         display: inline-block;
+      }
+
+      body {
+         background: linear-gradient(to right, lightgray, darkgray);
+      }
+
+      .container {
+         display: grid;
+         grid-template-columns: auto 1fr;
+         align-items: center;
+         max-width: 1000px;
+      }
+
+      .container img {
+         margin-right: 10px;
+      }
+   </style>
    </head>
    <body>
       <nav>
          <a href="index.html">Magyar</a>
       </nav>
-     <img src="images/my_photo.jpg" alt="Zoltán Patalenszki" width="200" height="200" float="left">
-     </br>
-     <p id="introduction">
-      I am Zoltán Patalenszki with 25 years experience in the field of database administration.
-      I works primarly with Oracle and MsSql databases but have limited experience with  PostgreSQL, MySql and MariaDB.            
-     </p>
-     <aside id="badges" >
-      <h4>Badges</h4>
-     </aside>
+      <div class="container">
+         <img src="images/my_photo.jpg" alt="Patalenszki Zoltán" width="200" height="200" float="left">
+         <p id="introduction">
+            I am Zoltán Patalenszki with 25 years experience in the field of database administration.I works primarly with Oracle and MsSql databases but have limited experience with  PostgreSQL, MySql and MariaDB.
+         </p>
+      </div>
+      <div id="badges">
+         <img src="badges\OCI2024GAIOCP_vagott.jpg" alt="Professional Oracle Cloud Infrastructure AI" id="oracle_badges">
+         <img src="badges\OCI23MCCA_vagott.jpg" alt="Associate Oracle Cloud Infrastructure Multicloud Architect"
+            id="oracle_badges">
+         <img src="badges\OCI2023CAA_vagott.jpg" alt="Associate Oracle Cloud Infrastructure Architect" id="oracle_badges">
+      </div>
    </body>
 </html>

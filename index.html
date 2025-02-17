@@ -5,22 +5,43 @@
    <title>Patalenszki Zoltán</title>
    <style>
       #introduction {
-         color: blueviolet;
+         color: black;
          font-family: Arial, Helvetica, sans-serif;
-         font-size: larger;
+         font-size: 1.5em;
          text-align: justify;
          float: left;
+         display: inline-block;
       }
 
       #badges {
          float: right;
-         border: 3px solid black;
          height: 100px;
+         position: absolute;
+         bottom: 10%;
+         align-content: center;
+         text-align: center;
       }
 
       #oracle_badges {
-         height: 50%;
-         width: 50%;
+         height: 200%;
+         width: 33%;
+         float: left;
+         display: inline-block;
+      }
+
+      body {
+         background: linear-gradient(to right, lightgray, darkgray);
+      }
+
+      .container {
+         display: grid;
+         grid-template-columns: auto 1fr;
+         align-items: center;
+         max-width: 1000px;
+      }
+
+      .container img {
+         margin-right: 10px;
       }
    </style>
 </head>
@@ -29,19 +50,21 @@
    <nav>
       <a href="index_en.html">English</a>
    </nav>
-   <img src="images/my_photo.jpg" alt="Patalenszki Zoltán" width="200" height="200" float="left">
-   </br>
-   <p id="introduction">
-      Patalenszki Zoltán vagyok. 25 éves tapasztalattal rendelkezem adatbázisok területén.
-      Elsősorban Oracle és MSSql adatbázisokkal dolgoztam, de érintőlegesen megismerkedtem PostgreSQL, MySql és MariaDB
-      adatbáziskezelőkkel is.
-   </p>
-   <aside id="badges">
-      <h4>Jelvények</h4>
-      <img src="badges\OCI2024GAIOCP.jpg" id="oracle_badges"></br>
-      <img src="badges\OCI23MCCA.jpg" id="oracle_badges"></br>
-      <img src="badges\OCI2023CAA.jpg" id="oracle_badges"></br>
-   </aside>
+   <div class="container">
+      <img src="images/my_photo.jpg" alt="Patalenszki Zoltán" width="200" height="200" float="left">
+      <p id="introduction">
+         Patalenszki Zoltán vagyok. 25 éves tapasztalattal rendelkezem adatbázisok területén.
+         Elsősorban Oracle és MSSql adatbázisokkal dolgoztam, de érintőlegesen megismerkedtem PostgreSQL, MySql és
+         MariaDB
+         adatbáziskezelőkkel is.
+      </p>
+   </div>
+   <div id="badges">
+      <img src="badges\OCI2024GAIOCP_vagott.jpg" alt="Professional Oracle Cloud Infrastructure AI" id="oracle_badges">
+      <img src="badges\OCI23MCCA_vagott.jpg" alt="Associate Oracle Cloud Infrastructure Multicloud Architect"
+         id="oracle_badges">
+      <img src="badges\OCI2023CAA_vagott.jpg" alt="Associate Oracle Cloud Infrastructure Architect" id="oracle_badges">
+   </div>
 </body>
 
 </html>
